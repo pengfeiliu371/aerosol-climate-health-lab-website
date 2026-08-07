@@ -1,0 +1,123 @@
+.people-roster {
+  display: block;
+}
+
+.people-section {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.35fr) minmax(0, 1.65fr);
+  gap: clamp(38px, 8vw, 118px);
+  padding: clamp(40px, 5vw, 66px) 0;
+  border-top: 1px solid var(--rule);
+}
+
+.people-section:first-child {
+  padding-top: 28px;
+}
+
+.people-section-heading h2 {
+  margin-bottom: 0;
+}
+
+.pi-copy {
+  max-width: 760px;
+}
+
+.pi-profile {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 128px;
+  gap: clamp(28px, 5vw, 64px);
+  align-items: start;
+  max-width: 860px;
+}
+
+.pi-copy p {
+  margin: 0 0 18px;
+  color: #56636b;
+  line-height: 1.75;
+}
+
+.pi-copy .quiet-link {
+  margin-top: 8px;
+}
+
+.people-section .member-list,
+.people-section .alumni-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  margin: 0;
+  max-width: 860px;
+}
+
+.people-section .member-list li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 112px;
+  gap: 30px;
+  align-items: center;
+  min-height: 160px;
+  padding: 18px 0;
+}
+
+.member-copy {
+  display: grid;
+  gap: 5px;
+}
+
+.profile-photo {
+  display: block;
+  width: 112px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+  justify-self: end;
+  border: 1px solid var(--rule);
+  background: #eef1ef;
+}
+
+.pi-photo {
+  width: 128px;
+  aspect-ratio: 2 / 3;
+}
+
+.people-section .alumni-list li {
+  min-height: 72px;
+  padding: 16px 0;
+}
+
+@media (max-width: 760px) {
+  .people-section {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 44px 0;
+  }
+
+  .people-section .member-list,
+  .people-section .alumni-list {
+    grid-template-columns: 1fr;
+  }
+
+  .people-section .member-list li,
+  .people-section .alumni-list li {
+    min-height: 0;
+  }
+
+  .pi-profile {
+    grid-template-columns: minmax(0, 1fr) 94px;
+    gap: 22px;
+  }
+
+  .people-section .member-list li {
+    grid-template-columns: minmax(0, 1fr) 88px;
+    gap: 20px;
+    min-height: 132px;
+  }
+
+  .profile-photo {
+    width: 88px;
+  }
+
+  .pi-photo {
+    width: 94px;
+    aspect-ratio: 2 / 3;
+  }
+}
+

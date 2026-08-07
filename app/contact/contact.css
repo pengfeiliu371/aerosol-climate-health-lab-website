@@ -1,0 +1,34 @@
+.protected-email {
+  display: inline;
+  padding: 0 0 4px;
+  border: 0;
+  border-bottom: 1px solid var(--navy);
+  background: transparent;
+  color: var(--navy);
+  cursor: pointer;
+  font: 500 25px "Source Serif 4", serif;
+  text-align: left;
+}
+
+.protected-email span {
+  color: var(--gold);
+  font-size: 0.72em;
+}
+
+.protected-email:hover,
+.protected-email:focus-visible {
+  color: #7b6927;
+  border-bottom-width: 2px;
+}
+
+.protected-email:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 5px;
+}
+
+@media (max-width: 760px) {
+  .protected-email {
+    font-size: 21px;
+  }
+}
+

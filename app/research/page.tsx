@@ -1,4 +1,5 @@
 import { PageShell } from "../components/SiteChrome";
+import { sitePath } from "../lib/sitePath";
 import "./references.css";
 
 type Theme = {
@@ -19,19 +20,19 @@ const themes: Theme[] = [
     alt: "Thin-film aerosol characterization methods and instruments",
     references: [
       {
-        label: "Liu, P., Zhang, Y., & Martin, S. T. (2013). Complex refractive indices of thin films of secondary organic materials by spectroscopic ellipsometry from 220 to 1200 nm. Environmental Science & Technology, 47, 13594â€“13601.",
+        label: "Liu, P., Zhang, Y., & Martin, S. T. (2013). Complex refractive indices of thin films of secondary organic materials by spectroscopic ellipsometry from 220 to 1200 nm. Environmental Science & Technology, 47, 13594–13601.",
         href: "https://doi.org/10.1021/es403411e",
       },
       {
-        label: "Liu, P. F., Abdelmalki, N., Hung, H.-M., Wang, Y., Brune, W. H., & Martin, S. T. (2015). Ultraviolet and visible complex refractive indices of secondary organic material produced by photooxidation of the aromatic compounds toluene and m-xylene. Atmospheric Chemistry and Physics, 15, 1435â€“1446.",
+        label: "Liu, P. F., Abdelmalki, N., Hung, H.-M., Wang, Y., Brune, W. H., & Martin, S. T. (2015). Ultraviolet and visible complex refractive indices of secondary organic material produced by photooxidation of the aromatic compounds toluene and m-xylene. Atmospheric Chemistry and Physics, 15, 1435–1446.",
         href: "https://doi.org/10.5194/acp-15-1435-2015",
       },
       {
-        label: "Liu, P., Li, Y. J., Wang, Y., Gilles, M. K., Zaveri, R. A., Bertram, A. K., & Martin, S. T. (2016). Lability of secondary organic particulate matter. Proceedings of the National Academy of Sciences, 113, 12643â€“12648.",
+        label: "Liu, P., Li, Y. J., Wang, Y., Gilles, M. K., Zaveri, R. A., Bertram, A. K., & Martin, S. T. (2016). Lability of secondary organic particulate matter. Proceedings of the National Academy of Sciences, 113, 12643–12648.",
         href: "https://doi.org/10.1073/pnas.1603138113",
       },
       {
-        label: "Liu, P., Li, Y. J., Wang, Y., Bateman, A. P., Zhang, Y., Gong, Z., Bertram, A. K., & Martin, S. T. (2018). Highly viscous states affect the browning of atmospheric organic particulate matter. ACS Central Science, 4, 207â€“215.",
+        label: "Liu, P., Li, Y. J., Wang, Y., Bateman, A. P., Zhang, Y., Gong, Z., Bertram, A. K., & Martin, S. T. (2018). Highly viscous states affect the browning of atmospheric organic particulate matter. ACS Central Science, 4, 207–215.",
         href: "https://doi.org/10.1021/acscentsci.7b00452",
       },
       {
@@ -51,20 +52,20 @@ const themes: Theme[] = [
   {
     displayPriority: 5,
     title: "Tropospheric halogen chemistry and emissions",
-    text: "Halogens exert a strong influence on tropospheric chemistry and, through that, affect air quality and climate. These processes were not considered in chemical transport models until recently. In the global budget, most halogen species are emitted from marine sources. However, our collaborative field studies observed a high concentration of particulate chloride in urban Delhi, India, suggesting a significant continental source [Gunthe, Liu, et al., Nature Geosci., 2021; Chen et al., ES&T, 2022]. These studies highlighted that chloride can explain about 50% of visibility degradation during Delhiâ€™s haze events. Motivated by these studies, we developed a new global high-resolution (0.1Â° Ã— 0.1Â°) emission inventory for hydrogen chloride (HCl) and particulate chloride [Zhang et al., ES&T, 2022], for use in chemical transport models.",
+    text: "Halogens exert a strong influence on tropospheric chemistry and, through that, affect air quality and climate. These processes were not considered in chemical transport models until recently. In the global budget, most halogen species are emitted from marine sources. However, our collaborative field studies observed a high concentration of particulate chloride in urban Delhi, India, suggesting a significant continental source [Gunthe, Liu, et al., Nature Geosci., 2021; Chen et al., ES&T, 2022]. These studies highlighted that chloride can explain about 50% of visibility degradation during Delhi’s haze events. Motivated by these studies, we developed a new global high-resolution (0.1° × 0.1°) emission inventory for hydrogen chloride (HCl) and particulate chloride [Zhang et al., ES&T, 2022], for use in chemical transport models.",
     image: "/images/research/halogen-chemistry.png",
     alt: "Conceptual diagram of particulate chloride chemistry and its air-quality effects",
     references: [
       {
-        label: "Gunthe, S. S., Liu, P., Panda, U., et al. (2021). Enhanced aerosol particle growth sustained by high continental chlorine emission in India. Nature Geoscience, 14, 77â€“84.",
+        label: "Gunthe, S. S., Liu, P., Panda, U., et al. (2021). Enhanced aerosol particle growth sustained by high continental chlorine emission in India. Nature Geoscience, 14, 77–84.",
         href: "https://doi.org/10.1038/s41561-020-00677-x",
       },
       {
-        label: "Chen, Y., Wang, Y., Nenes, A., et al. (2022). Ammonium chloride associated aerosol liquid water enhances haze in Delhi, India. Environmental Science & Technology, 56, 7163â€“7173.",
+        label: "Chen, Y., Wang, Y., Nenes, A., et al. (2022). Ammonium chloride associated aerosol liquid water enhances haze in Delhi, India. Environmental Science & Technology, 56, 7163–7173.",
         href: "https://doi.org/10.1021/acs.est.2c00650",
       },
       {
-        label: "Zhang, B., Shen, H., Yun, X., et al. (2022). Global emissions of hydrogen chloride and particulate chloride from continental sources. Environmental Science & Technology, 56, 3894â€“3904.",
+        label: "Zhang, B., Shen, H., Yun, X., et al. (2022). Global emissions of hydrogen chloride and particulate chloride from continental sources. Environmental Science & Technology, 56, 3894–3904.",
         href: "https://doi.org/10.1021/acs.est.1c05634",
       },
     ],
@@ -94,7 +95,7 @@ const themes: Theme[] = [
     alt: "Environmental health research framework connecting air-pollution exposure, health effects, and biological mechanisms",
     references: [
       {
-        label: "Shi, L., Steenland, K., Li, H., et al. (2021). A national cohort study (2000â€“2018) of long-term air pollution exposure and incident dementia in older adults in the United States. Nature Communications, 12, 6754.",
+        label: "Shi, L., Steenland, K., Li, H., et al. (2021). A national cohort study (2000–2018) of long-term air pollution exposure and incident dementia in older adults in the United States. Nature Communications, 12, 6754.",
         href: "https://doi.org/10.1038/s41467-021-27049-2",
       },
       {
@@ -114,7 +115,7 @@ const themes: Theme[] = [
   {
     displayPriority: 2,
     title: "Climate-air quality interactions",
-    text: "Rising temperatures can worsen air pollution, but the magnitude and drivers of this â€œclimate penaltyâ€ vary across regions and evolve as emissions change. We combine high-resolution machine-learning datasets, observations, and chemical transport modeling to quantify how summertime PM2.5 and ozone respond to temperature across the United States. Our analysis shows that emission controls have substantially weakened the temperature sensitivity of PM2.5 and ozone in the eastern US, while the western US has become increasingly vulnerable because of temperature-sensitive wildfire emissions [Yin et al., 2025]. Using an improved GEOS-Chem model, we further identify the processes driving these regional patterns: chemical production governs the long-term sensitivity of isoprene SOA and sulfate in the eastern US, wildfire-related primary emissions are central in the West, and atmospheric transport modulates year-to-year variability [Yin et al., 2026]. This work improves projections of air quality under a warming climate and supports region-specific mitigation strategies.",
+    text: "Rising temperatures can worsen air pollution, but the magnitude and drivers of this “climate penalty” vary across regions and evolve as emissions change. We combine high-resolution machine-learning datasets, observations, and chemical transport modeling to quantify how summertime PM2.5 and ozone respond to temperature across the United States. Our analysis shows that emission controls have substantially weakened the temperature sensitivity of PM2.5 and ozone in the eastern US, while the western US has become increasingly vulnerable because of temperature-sensitive wildfire emissions [Yin et al., 2025]. Using an improved GEOS-Chem model, we further identify the processes driving these regional patterns: chemical production governs the long-term sensitivity of isoprene SOA and sulfate in the eastern US, wildfire-related primary emissions are central in the West, and atmospheric transport modulates year-to-year variability [Yin et al., 2026]. This work improves projections of air quality under a warming climate and supports region-specific mitigation strategies.",
     image: "/images/research/climate-air-quality-interactions.png",
     alt: "Observed regional trends and model diagnosis of PM2.5 temperature sensitivity across the United States",
     references: [
@@ -123,7 +124,7 @@ const themes: Theme[] = [
         href: "https://doi.org/10.1038/s41612-024-00862-4",
       },
       {
-        label: "Yin, L., Zheng, Y., Bai, B., et al. (2026). Processes driving the regional sensitivities of summertime PM2.5 to temperature across the US: New insights from model simulations. Atmospheric Chemistry and Physics, 26, 5901â€“5923.",
+        label: "Yin, L., Zheng, Y., Bai, B., et al. (2026). Processes driving the regional sensitivities of summertime PM2.5 to temperature across the US: New insights from model simulations. Atmospheric Chemistry and Physics, 26, 5901–5923.",
         href: "https://doi.org/10.5194/acp-26-5901-2026",
       },
     ],
@@ -161,12 +162,12 @@ export default function ResearchPage() {
                   </ol>
                 </div>
               </div>
-              <figure className="research-figure"><img src={image} alt={alt} /></figure>
+              <figure className="research-figure"><img src={sitePath(image)} alt={alt} /></figure>
             </article>
             ))}
           <aside>
             <p>Our work connects aerosol physics and chemistry with instrument development, field observations, and environmental-health questions.</p>
-            <a className="quiet-link dark" href="/datasets">Explore datasets <span>â†’</span></a>
+            <a className="quiet-link dark" href={sitePath("/datasets")}>Explore datasets <span>→</span></a>
           </aside>
         </section>
       </main>

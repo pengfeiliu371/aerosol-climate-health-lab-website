@@ -15,17 +15,17 @@ export const members: Member[] = [
   },
   {
     name: "Bin Bai",
-    role: "Graduate student · 2021–",
+    role: "Ph.D. student · 2021–",
     image: "/images/people/bin-bai.jpg"
   },
   {
     name: "Shreya Suri",
-    role: "Graduate student · 2022–",
+    role: "Ph.D. student · 2022–",
     image: "/images/people/shreya-suri.jpg"
   },
   {
     name: "Longkun He",
-    role: "Graduate student · 2024–",
+    role: "Ph.D. student · 2024–",
     image: "/images/people/longkun-he.jpg"
   },
   {
@@ -42,12 +42,12 @@ export const members: Member[] = [
 export const formerMembers = [
   {
     name: "Bingqing Zhang",
-    roleAndPeriod: "Graduate student · 2021–2025",
+    roleAndPeriod: "Ph.D. student · 2021–2025",
     currentPosition: "Postdoctoral fellow, University of Chicago",
   },
   {
     name: "Lifei Yin",
-    roleAndPeriod: "Graduate student · 2021–2025",
+    roleAndPeriod: "Ph.D. student · 2021–2025",
     currentPosition: "California Air Resources Board",
   },
   {
@@ -57,7 +57,7 @@ export const formerMembers = [
   },
   {
     name: "Nara Shin",
-    roleAndPeriod: "Graduate student · 2020–2023",
+    roleAndPeriod: "Master’s student · 2020–2023",
     currentPosition: "Ph.D. student, Purdue University",
   },
 ];

@@ -1,11 +1,12 @@
 import { PageShell } from "../components/SiteChrome";
+import { sitePath } from "../lib/sitePath";
 import "./news.css";
 
 const posts = [
   {
     date: "2026.08",
-    text: "Pengfei Liu was promoted to Associate Professor and appointed the Elwood P. â€˜Docâ€™ Blanchard Early Career Professor in the School of Earth and Atmospheric Sciences.",
-    emphasis: ["Elwood P. â€˜Docâ€™ Blanchard Early Career Professor"],
+    text: "Pengfei Liu was promoted to Associate Professor and appointed the Elwood P. ‘Doc’ Blanchard Early Career Professor in the School of Earth and Atmospheric Sciences.",
+    emphasis: ["Elwood P. ‘Doc’ Blanchard Early Career Professor"],
   },
   {
     date: "2026.05",
@@ -50,7 +51,7 @@ const posts = [
   },
   {
     date: "2025.06",
-    text: "Our groupâ€™s research was featured on the",
+    text: "Our group’s research was featured on the",
     href: "https://news.research.gatech.edu/feature/better-climate",
     linkLabel: "Georgia Tech website",
     image: "/images/news/georgia-tech-better-climate-feature.png",
@@ -59,7 +60,7 @@ const posts = [
   },
   {
     date: "2025.04",
-    text: "High school mentee Sarah Wang presented â€œSpatial disparities in toxic PM across modes of transportationâ€ at the Georgia Science and Engineering Fair, earning First Honors and three major awards: the Senior Division Best in Category Grand Award (Earth and Environmental Science), the Atlanta Geological Society Nils Thompson Memorial Award, and the Wesleyan College Math & Science Award.",
+    text: "High school mentee Sarah Wang presented “Spatial disparities in toxic PM across modes of transportation” at the Georgia Science and Engineering Fair, earning First Honors and three major awards: the Senior Division Best in Category Grand Award (Earth and Environmental Science), the Atlanta Geological Society Nils Thompson Memorial Award, and the Wesleyan College Math & Science Award.",
     emphasis: [
       "First Honors",
       "Senior Division Best in Category Grand Award (Earth and Environmental Science)",
@@ -83,7 +84,7 @@ const posts = [
   },
   {
     date: "2025.03",
-    text: "Nara Shin led an ACS ES&T Air study showing that direct photolysis can remove 10â€“40% of furan-derived secondary organic aerosol mass over typical atmospheric lifetimes",
+    text: "Nara Shin led an ACS ES&T Air study showing that direct photolysis can remove 10–40% of furan-derived secondary organic aerosol mass over typical atmospheric lifetimes",
     href: "https://doi.org/10.1021/acsestair.4c00230",
     linkLabel: "Read the paper",
     emphasis: ["ACS ES&T Air"],
@@ -147,7 +148,7 @@ export default function NewsPage() {
               <div className="news-media">
                 {image ? (
                   <figure className="news-photo">
-                    <img src={image} alt={imageAlt} loading="lazy" />
+                    <img src={sitePath(image)} alt={imageAlt} loading="lazy" />
                   </figure>
                 ) : null}
               </div>

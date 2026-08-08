@@ -1,14 +1,31 @@
 "use client";
 
 import { useState, type ReactNode } from "react";
+import { usePathname } from "next/navigation";
 import { sitePath } from "../lib/sitePath";
+
+const navLinks = [
+  { href: "/research", label: "Research" },
+  { href: "/people", label: "People" },
+  { href: "/publications", label: "Publications" },
+  { href: "/news", label: "News" },
+  { href: "/datasets", label: "Data" },
+  { href: "/contact", label: "Contact" },
+];
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname().replace(/\/$/, "");
   return <header className="site-header">
     <a className="wordmark" href={sitePath("/")}><strong>AEROSOL</strong><span>Climate &amp; Health Laboratory<br />Georgia Tech · EAS</span></a>
-    <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen}>MENU</button>
-    <nav className={menuOpen ? "open" : ""} aria-label="Main navigation"><a href={sitePath("/research")}>Research</a><a href={sitePath("/people")}>People</a><a href={sitePath("/publications")}>Publications</a><a href={sitePath("/news")}>News</a><a href={sitePath("/datasets")}>Data</a><a href={sitePath("/contact")}>Contact</a></nav>
+    <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-controls="main-navigation" aria-label={`${menuOpen ? "Close" : "Open"} main navigation`}>MENU</button>
+    <nav id="main-navigation" className={menuOpen ? "open" : ""} aria-label="Main navigation">
+      {navLinks.map(({ href, label }) => {
+        const resolvedHref = sitePath(href).replace(/\/$/, "");
+        const isCurrent = pathname === resolvedHref;
+        return <a href={resolvedHref} aria-current={isCurrent ? "page" : undefined} key={href}>{label}</a>;
+      })}
+    </nav>
   </header>;
 }
 

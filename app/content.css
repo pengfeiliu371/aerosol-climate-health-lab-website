@@ -30,6 +30,45 @@
   .publication-list article{grid-template-columns:1fr;gap:7px;padding:16px 0}
 }
 
+/* Shared interior-page rhythm and accessibility refinements. */
+:root{
+  --gold-text:#7b6927;
+  --content-max:1440px;
+  --content-gutter:max(clamp(24px,6vw,96px),calc((100vw - var(--content-max))/2 + 64px));
+}
+
+.site-header,
+footer,
+.page-hero,
+.page-body,
+.join{
+  padding-inline:var(--content-gutter);
+}
+
+.site-header nav{
+  font-size:12px;
+}
+
+.site-header nav a[aria-current="page"]{
+  color:var(--navy);
+  border-color:var(--gold-text);
+}
+
+:where(a,button,input,summary,[tabindex]):focus-visible{
+  outline:3px solid var(--gold-text);
+  outline-offset:4px;
+}
+
+.theme-list article>span,
+.home-index span,
+.research-modes span,
+.research-detail article>span,
+.research-references li::before,
+.dataset-number,
+.dataset-references li::before{
+  color:var(--gold-text);
+}
+
 /* Interior pages should read as working research resources, not oversized
    campaign landing pages. Keep their introductions concise on large screens. */
 .page-hero{
@@ -138,3 +177,4 @@
   .publication-year-nav{gap:9px 13px;padding:13px 0 16px}
   .publication-year-nav span{flex-basis:100%;margin-bottom:2px}
 }
+

@@ -24,7 +24,45 @@ const members = [
     image: "/images/people/longkun-he.jpg"
   }
 ];
-const alumni = ["Nara Shin · Graduate student, 2020–2023 · PhD student at Purdue", "Yuhan Yang · Postdoctoral fellow, 2024–2025 · California Air Resources Board", "Bingqing Zhang · Graduate student, 2021–2025 · Postdoctoral fellow, University of Chicago", "Lifei Yin · Graduate student, 2021–2025 · California Air Resources Board"];
+const alumni = [
+  {
+    name: "Shailina Srivastava",
+    role: "Visiting scholar",
+    period: "October 2024–January 2025 · October 2025–July 2026",
+    note: "IIT Madras, India",
+    honor: "Fulbright Fellow",
+  },
+  {
+    name: "Bingqing Zhang",
+    role: "Graduate student",
+    period: "2021–2025",
+    note: "Postdoctoral fellow, University of Chicago",
+  },
+  {
+    name: "Lifei Yin",
+    role: "Graduate student",
+    period: "2021–2025",
+    note: "California Air Resources Board",
+  },
+  {
+    name: "Yuhan Yang",
+    role: "Postdoctoral fellow",
+    period: "2024–2025",
+    note: "California Air Resources Board",
+  },
+  {
+    name: "Nara Shin",
+    role: "Graduate student",
+    period: "2020–2023",
+    note: "Ph.D. student, Purdue University",
+  },
+  {
+    name: "Aishwarya Singh",
+    role: "Visiting scholar",
+    period: "September–December 2022",
+    note: "IIT Madras, India",
+  },
+];
 
 export default function PeoplePage() {
   return <PageShell><main>
@@ -42,8 +80,12 @@ export default function PeoplePage() {
         <ul className="member-list">{members.map(({ name, role, image }) => <li key={name}><div className="member-copy"><strong>{name}</strong><span>{role}</span></div><img className="profile-photo" src={sitePath(image)} alt={name} loading="lazy" /></li>)}</ul>
       </section>
       <section className="people-section alumni-section">
-        <div className="people-section-heading"><p className="kicker">ALUMNI</p><h2>Where they are now</h2></div>
-        <ul className="alumni-list">{alumni.map(person => <li key={person}>{person}</li>)}</ul>
+        <div className="people-section-heading"><p className="kicker">ALUMNI</p><h2>Former members<br />&amp; visitors</h2></div>
+        <ul className="alumni-list">{alumni.map(({ name, role, period, note, honor }) => <li key={name}>
+          <div className="alumni-name"><strong>{name}</strong>{honor ? <span className="alumni-honor">{honor}</span> : null}</div>
+          <span className="alumni-role">{role}</span>
+          <div className="alumni-details"><span className="alumni-period">{period}</span><span className="alumni-note">{note}</span></div>
+        </li>)}</ul>
       </section>
     </section>
     <section className="join"><p className="kicker">JOIN THE GROUP</p><h2>We welcome curious,<br />careful scientists.</h2><p>Prospective students and collaborators are encouraged to contact Prof. Liu.</p><a className="quiet-link dark" href={sitePath("/contact")}>Contact the group <span>→</span></a></section>

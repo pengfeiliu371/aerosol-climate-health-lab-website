@@ -1,5 +1,6 @@
 import { posts } from "../data/news";
 import { PageShell } from "../components/SiteChrome";
+import { ScientificText } from "../components/ScientificText";
 import { sitePath } from "../lib/sitePath";
 import "./news.css";
 
@@ -8,14 +9,16 @@ function escapeRegExp(text: string) {
 }
 
 function EmphasizedText({ text, terms = [] }: { text: string; terms?: string[] }) {
-  if (!terms.length) return <>{text}</>;
+  if (!terms.length) return <ScientificText text={text} />;
 
   const orderedTerms = [...terms].sort((a, b) => b.length - a.length);
   const termSet = new Set(orderedTerms);
   const parts = text.split(new RegExp(`(${orderedTerms.map(escapeRegExp).join("|")})`, "g"));
 
   return <>{parts.map((part, index) => (
-    termSet.has(part) ? <em key={`${part}-${index}`}>{part}</em> : part
+    termSet.has(part)
+      ? <em key={`${part}-${index}`}><ScientificText text={part} /></em>
+      : <ScientificText text={part} key={`${part}-${index}`} />
   ))}</>;
 }
 
@@ -25,7 +28,7 @@ export default function NewsPage() {
       <main>
         <section className="page-hero">
           <p className="kicker">NEWS</p>
-          <h1>News from<br />the <em>lab.</em></h1>
+          <h1 aria-label="News from the lab.">News from<br />the <em>lab.</em></h1>
           <p>Research highlights, publications, awards, and milestones from our group.</p>
         </section>
         <section className="page-body news-page">
@@ -46,7 +49,7 @@ export default function NewsPage() {
               <div className="news-media">
                 {image ? (
                   <figure className="news-photo">
-                    <img src={sitePath(image)} alt={imageAlt} loading="lazy" />
+                    <img src={sitePath(image)} alt={imageAlt} loading="lazy" decoding="async" />
                   </figure>
                 ) : null}
               </div>
@@ -57,3 +60,4 @@ export default function NewsPage() {
     </PageShell>
   );
 }
+

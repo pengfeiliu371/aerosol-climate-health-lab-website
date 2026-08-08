@@ -2,7 +2,14 @@ import { PageShell } from "../components/SiteChrome";
 import { sitePath } from "../lib/sitePath";
 import "./people.css";
 
-const members = [
+type Member = {
+  name: string;
+  role: string;
+  image?: string;
+  initials?: string;
+};
+
+const members: Member[] = [
   {
     name: "Minhan Park",
     role: "Postdoctoral fellow · co-advised with Dr. Weber · 2024–",
@@ -22,6 +29,16 @@ const members = [
     name: "Longkun He",
     role: "Graduate student · 2024–",
     image: "/images/people/longkun-he.jpg"
+  },
+  {
+    name: "Siqi Wang",
+    role: "Ph.D. student · 2026–",
+    initials: "SW",
+  },
+  {
+    name: "Zishu Wang",
+    role: "Master’s student · 2026–",
+    initials: "ZW",
   }
 ];
 const formerMembers = [
@@ -74,7 +91,10 @@ export default function PeoplePage() {
       </section>
       <section className="people-section">
         <div className="people-section-heading"><p className="kicker">CURRENT MEMBERS</p><h2>Group members</h2></div>
-        <ul className="member-list">{members.map(({ name, role, image }) => <li key={name}><div className="member-copy"><strong>{name}</strong><span>{role}</span></div><img className="profile-photo" src={sitePath(image)} alt={name} loading="lazy" /></li>)}</ul>
+        <ul className="member-list">{members.map(({ name, role, image, initials }) => <li key={name}>
+          <div className="member-copy"><strong>{name}</strong><span>{role}</span></div>
+          {image ? <img className="profile-photo" src={sitePath(image)} alt={name} loading="lazy" /> : <div className="profile-photo profile-placeholder" role="img" aria-label={`${name} photograph forthcoming`}><span>{initials}</span><small>Photo forthcoming</small></div>}
+        </li>)}</ul>
       </section>
       <section className="people-section alumni-section">
         <div className="people-section-heading"><p className="kicker">ALUMNI &amp; VISITORS</p><h2>Former members<br />&amp; visiting scholars</h2></div>

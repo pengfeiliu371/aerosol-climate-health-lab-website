@@ -100,6 +100,26 @@
   background: #eef1ef;
 }
 
+.profile-placeholder {
+  display: grid;
+  place-content: center;
+  gap: 7px;
+  padding: 8px;
+  color: var(--navy);
+  text-align: center;
+}
+
+.profile-placeholder span {
+  font: 500 23px/1 "Source Serif 4", serif;
+}
+
+.profile-placeholder small {
+  color: #7b6927;
+  font: 500 7px/1.35 "DM Mono", monospace;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
 .pi-photo {
   width: 128px;
   aspect-ratio: 2 / 3;

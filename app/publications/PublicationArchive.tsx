@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import {
+  books,
   inPreparation,
   inReview,
   peerReviewed,
@@ -99,12 +100,14 @@ export function PublicationArchive() {
       years: publicationYears
         .map(({ year, citations }) => ({ year, citations: citations.filter(matches) }))
         .filter(({ citations }) => citations.length > 0),
+      books: books.filter(matches),
     };
   }, [normalizedQuery]);
 
   const resultCount = filtered.preparation.length
     + filtered.review.length
-    + filtered.years.reduce((total, group) => total + group.citations.length, 0);
+    + filtered.years.reduce((total, group) => total + group.citations.length, 0)
+    + filtered.books.length;
   const hasQuery = normalizedQuery.length > 0;
 
   return (
@@ -150,6 +153,11 @@ export function PublicationArchive() {
         {citations.map((citation) => <PublicationRow key={citation} citation={citation} />)}
       </section>)}
 
+      {filtered.books.length > 0 && <>
+        <h2 className="publication-section-heading">Books</h2>
+        {filtered.books.map((citation) => <PublicationRow key={citation} citation={citation} />)}
+      </>}
+
       {resultCount === 0 && <div className="publication-empty">
         <h2>No matching publications</h2>
         <p>Try an author surname, journal title, research topic, or year.</p>
@@ -158,3 +166,4 @@ export function PublicationArchive() {
     </section>
   );
 }
+

@@ -1,5 +1,9 @@
 import { PageShell } from "../components/SiteChrome";
 
+const inPreparation = [
+  "Yin, L., Bai, B., Suri, S., Yang, Y., Sherman, J. P., & Liu, P.* Mixing-state heterogeneity compensates coating-driven enhancement of black carbon absorption. In preparation.",
+  "Park, M., Denna, M. C. F. J., Edwards, K. C., Jeon, S., Jo, S., Kaehr, A., Liu, R., Ng, N. L., Shiraiwa, M., Mao, X., Liu, P.*, & Weber, R. J.* Seasonal variation and chemical driver of PM2.5 oxidative potential and environmentally persistent free radicals in Atlanta, GA at the ASCENT site. In preparation."
+];
 const inReview = [
   "Zhang, B., Mickley, L. J., Chellman, N. J., Markle, B. R., Arienzo, M. M., Wensman, S., McConnell, J. R., Liu, P.*, Rapid Responses of Aerosol Emissions and Transport to Abrupt Climate Transitions during the Last Glacial Period. Submitted."
 ];
@@ -225,7 +229,9 @@ export default function PublicationsPage() {
         <section className="page-body publication-list">
           <p className="kicker">COMPLETE PUBLICATION ARCHIVE</p>
           <p className="archive-note">Complete list migrated from the former group website, covering 2009â€“2026. * indicates corresponding author.</p>
-          <h2 className="publication-section-heading">In preparation, submitted, or in review</h2>
+          <h2 className="publication-section-heading">In preparation</h2>
+          {inPreparation.map((citation) => <article key={citation}><time>NEW</time><p><CitationText text={citation} /></p></article>)}
+          <h2 className="publication-section-heading">Submitted or in review</h2>
           {inReview.map((citation) => <article key={citation}><time>NEW</time><p><CitationText text={citation} /></p></article>)}
           <h2 className="publication-section-heading">Peer-reviewed articles</h2>
           {peerReviewed.map((entry, index) => <PublicationEntry key={`${entry}-${index}`} entry={entry} index={index} />)}

@@ -1,4 +1,5 @@
 import { PageShell } from "./components/SiteChrome";
+import { posts } from "./data/news";
 import { sitePath } from "./lib/sitePath";
 import "./home.css";
 
@@ -19,7 +20,21 @@ export default function Home() {
         </div>
       </div>
     </section>
+    <section className="home-news">
+      <div className="home-news-heading">
+        <div><p className="kicker">RECENT UPDATES</p><h2>From the group.</h2></div>
+        <a className="quiet-link dark" href={sitePath("/news")}>View all news <span>→</span></a>
+      </div>
+      <div className="home-news-list">
+        {posts.slice(0, 3).map((post) => (
+          <article key={`${post.date}-${post.text}`}>
+            <time>{post.date}</time>
+            <p>{post.text}</p>
+            {post.href && <a href={post.href} target="_blank" rel="noreferrer">{post.linkLabel ?? "Learn more"} <span>↗</span></a>}
+          </article>
+        ))}
+      </div>
+    </section>
     <section className="home-index"><a href={sitePath("/research")}><span>01</span><h2>Research</h2><p>Aerosol chemistry, air quality, and climate</p><b>→</b></a><a href={sitePath("/people")}><span>02</span><h2>People</h2><p>Our lab community</p><b>→</b></a><a href={sitePath("/publications")}><span>03</span><h2>Publications</h2><p>Selected work and full archive</p><b>→</b></a></section>
   </main></PageShell>;
 }
-

@@ -36,7 +36,7 @@ export const members: Member[] = [
   {
     name: "Zishu Wang",
     role: "Master’s student · 2026–",
-    initials: "ZW",
+    image: "/images/people/zishu-wang.jpg",
   }
 ];
 export const formerMembers = [
@@ -75,3 +75,4 @@ export const visitingScholars = [
     visitPeriod: "September–December 2022",
   },
 ];
+

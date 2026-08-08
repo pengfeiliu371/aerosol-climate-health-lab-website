@@ -18,6 +18,9 @@ export const peerReviewed = [
   "Bai, B., Vandergrift, G. W., Liang, Y., Li, Y., Cheng, Z., Wang, Y., Shin, N., Keutsch, F., Lambe, A., China, S., Ng, N. L., & Liu, P.* (2026). Dynamic Evolution of Mass and Physical Properties of Atmospheric Organic Aerosol Under Solar Irradiance. Environmental Science & Technology, 60(8), 6464–6476. https://doi.org/10.1021/acs.est.5c16671",
   "Bai, B., Singh, A., Xu, T., Stamatis, C., Lu, K., Shin, N., Glenn, C. K., El Hajj, O., Kumar, K. V., Anosike, A., Abdurrahman, M. I., Gunthe, S. S., O’Brien, J. J., Isaacman-VanWertz, G., Saleh, R., Ng, N. L., & Liu, P.* (2026). Hygroscopicity and Cloud Condensation Nuclei Activity of Fresh and Aged Biomass Burning Particles. ACS ES&T Air, 3(3), 697–709. https://doi.org/10.1021/acsestair.5c00331",
   "2025",
+  "Moo, Z., DeMarsh, K., Hao, P., Wang, Y., Zhang, X., Liu, P.*, Mao, X., & Zhang, X. (2025). Incense and Candle Burning: A Major Source of Phthalate Exposure in Indoor Environments. Indoor Air, 2025, 5518324. https://doi.org/10.1155/ina/5518324",
+  "Zhai, J., Zhang, Y., Liu, P., Zhang, Y., Zhang, A., Zeng, Y., Cai, B., Zhang, J., Xing, C., Yang, H., Wang, X., Ye, J., Wang, C., Fu, T.-M., Zhu, L., Shen, H., Tao, S., & Yang, X. (2025). Source-dependent optical properties and molecular characteristics of atmospheric brown carbon. Atmospheric Chemistry and Physics, 25, 7959–7972. https://doi.org/10.5194/acp-25-7959-2025",
+  "Panda, U., Dey, S., Sharma, A., Singh, A., Reyes-Villegas, E., Darbyshire, E., Carbone, S., Das, T., Allan, J., McFiggans, G., Ravikrishna, R., Coe, H., Liu, P., & Gunthe, S. S. (2025). Exploring the chemical composition and processes of submicron aerosols in Delhi using aerosol chemical speciation monitor driven factor analysis. Scientific Reports, 15, 14383. https://doi.org/10.1038/s41598-025-99245-9",
   "Li, Z., Lawal, A. S., Zhang, B., Maji, K. J., Liu, P., Hu, Y., Russell, A. G., & Odman, M. T. (2025). A Generalized User-friendly Method for Fusing Observational Data and Chemical Transport Model (Gen-Friberg V1.0: GF-1). Environmental Modelling & Software, 197, 106827.",
   "Kotha, S.V., Kuo, G., Kammula, S.V., Shi, L., Zhang, X.*, Liu, P.*, & Mao, X. The Epidemiological and Toxicological Intersection of Air Pollution and Dementia. Reviews Env. Contamination 263, 25 (2025). https://doi.org/10.1007/s44169-025-00092-6",
   "He, Y., Kadko, D. C., Stephens, M. P., Sheridan, M. T., Buck, C. S., Marsay, C. M., Landing, W. M., Zheng, M., & Liu, P. (2025). Constraining aerosol deposition over the global ocean. Nature Geoscience, 18, 966–974. https://doi.org/10.1038/s41561-025-01785-2",
@@ -83,7 +86,8 @@ export const peerReviewed = [
   "2019\nSong, S., Nenes, A., Gao, M., Zhang, Y., Liu, P., Shao, J., Ye, D., Xu, W., Lei, L., Sun, Y. and Liu, B., 2019. Thermodynamic Modeling Suggests Declines in Water Uptake and Acidity of Inorganic Aerosols in Beijing Winter Haze Events during 2014/2015–2018/2019. Environmental Science & Technology Letters, 6(12), pp.752-760.",
   "Han, Y., Gong, Z., Liu, P., de Sá, S. S., McKinney, K. A., & Martin, S. T.: Influence of Particle Surface Area Concentration on the Production of Organic Particulate Matter in a Continuously Mixed Flow Reactor. Environmental science & technology, 53(9), 4968-4976, 2019.",
   "Han, Y., Gong, Z., Ye, J., Liu, P., McKinney, K.A. and Martin, S.T., 2019. Quantifying the Role of the Relative Humidity-Dependent Physical State of Organic Particulate Matter in the Uptake of Semivolatile Organic Molecules. Environmental Science & Technology, 53(22), pp.13209-13218.",
-  "2018\nLiu, P., Song, M., Zhao, T. N., Gunthe, S. S., Ham, S., He, Y. P., Qin, Y. M., Gong, Z. H., Amorim, J. C., Bertram, A. K., Martin, S. T.: Resolving the Mechanisms of Hygroscopic Growth and Cloud Condensation Nuclei Activity for Organic Particulate Matter, Nature Communications, 9, 4076, doi:10.1038/s41467-018-06622-2, 2018.",
+  "2018\nWang, Y., Liu, P., Li, Y. J., Bateman, A. P., Martin, S. T., & Hung, H.-M. (2018). The Reactivity of Toluene-Derived Secondary Organic Material with Ammonia and the Influence of Water Vapor. The Journal of Physical Chemistry A, 122(38), 7739–7747. https://doi.org/10.1021/acs.jpca.8b06685",
+  "Liu, P., Song, M., Zhao, T. N., Gunthe, S. S., Ham, S., He, Y. P., Qin, Y. M., Gong, Z. H., Amorim, J. C., Bertram, A. K., Martin, S. T.: Resolving the Mechanisms of Hygroscopic Growth and Cloud Condensation Nuclei Activity for Organic Particulate Matter, Nature Communications, 9, 4076, doi:10.1038/s41467-018-06622-2, 2018.",
   "Liu, P., Li, Y. J., Wang, Y., Bateman, A. P., Zhang, Y., Gong, Z. H., Bertram, A. K., Martin, S. T.: Highly viscous states affect the browning of atmospheric organic particulate matter, ACS Central Science, 4(2), 207–215, 2018.",
   "Zhang, Y., Liu, P., Gong, Z., Geiger, F. M., Martin, S. T.: Production and Measurement of Organic Particulate Matter in a Flow Tube Reactor. JoVE (Journal of Visualized Experiments), (142), e55684, 2018.",
   "Gong, Z.; Han, Y.; Liu, P.; Ye, J.; Keutsch, F. N.; McKinney, K. A.; Martin, S. T., Influence of Particle Physical State on the Uptake of Medium-Sized Organic Molecules. Environ. Sci. Technol., 2018, 52 (15), 8381-8389.",
@@ -119,6 +123,10 @@ export const peerReviewed = [
   "Xiao, X. Z.; Liu, P.; Geng, F. H.; Gao, W.; Zhen, C. M.; Zhao, C. S., Comparison of black carbon aerosols in urban and suburban areas of Shanghai. J. App. Meteorol. Sci., 22, (2), 158-168, 2011 (in Chinese).",
   "Liu, P.; Liu, S. H.; Hu, F.; Lv, S.; Liu, H.; Zhang, Y.; Chen, G.; Liang, F., A comparison of the different methods for estimating turbulent fluxes and their errors. Acta Meteorologica Sinica, 68, (4), 487-500, 2010 (in Chinese).",
   "Liu, P., Zhao, C., Zhang, Q., Deng, Z., Huang, M., Ma, X., and Tie, X.: Aircraft study of aerosol vertical distributions over Beijing and their optical properties, Tellus B, 61, 756-767, 2009."
+];
+
+export const books = [
+  "Zhang, Y., Liu, P., Han, Y., Li, Y., Chen, Q., Kuwata, M., & Martin, S. T. (2022). Aerosols in Atmospheric Chemistry. ACS In Focus. American Chemical Society. https://doi.org/10.1021/acsinfocus.7e5020",
 ];
 
 export const supplementalLinks = [
@@ -168,3 +176,4 @@ export const supplementalLinks = [
     href: "https://www.thelancet.com/journals/lanplh/article/PIIS2542-5196(20)30227-8/fulltext",
   },
 ];
+

@@ -52,3 +52,11 @@
   text-underline-offset: 3px;
 }
 
+@media (min-width: 1100px) {
+  .research-detail article {
+    grid-template-columns: 70px minmax(0, 680px) minmax(220px, 290px);
+    column-gap: clamp(28px, 3vw, 48px);
+    justify-content: start;
+  }
+}
+

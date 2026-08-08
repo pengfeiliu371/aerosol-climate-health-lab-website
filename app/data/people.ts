@@ -15,17 +15,17 @@ export const members: Member[] = [
   },
   {
     name: "Bin Bai",
-    role: "Graduate student · 2021–",
+    role: "Ph.D. student · 2021–",
     image: "/images/people/bin-bai.jpg"
   },
   {
     name: "Shreya Suri",
-    role: "Graduate student · 2022–",
+    role: "Ph.D. student · 2022–",
     image: "/images/people/shreya-suri.jpg"
   },
   {
     name: "Longkun He",
-    role: "Graduate student · 2024–",
+    role: "Ph.D. student · 2024–",
     image: "/images/people/longkun-he.jpg"
   },
   {

@@ -79,8 +79,51 @@
 }
 
 .people-section .alumni-list li {
-  min-height: 72px;
-  padding: 16px 0;
+  display: grid;
+  grid-template-columns: minmax(170px, 0.85fr) minmax(130px, 0.65fr) minmax(250px, 1.4fr);
+  gap: 28px;
+  align-items: start;
+  min-height: 0;
+  padding: 18px 0;
+}
+
+.alumni-name,
+.alumni-details {
+  display: grid;
+  gap: 6px;
+}
+
+.alumni-name strong {
+  color: var(--navy);
+  font: 500 19px/1.25 "Source Serif 4", serif;
+}
+
+.alumni-honor {
+  width: fit-content;
+  padding: 4px 7px 3px;
+  border: 1px solid rgba(155, 123, 33, 0.45);
+  background: rgba(216, 199, 119, 0.15);
+  color: #7b6927;
+  font: 500 9px/1.2 "DM Mono", monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.alumni-role {
+  color: var(--navy);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.alumni-period {
+  color: #7b6927;
+  font: 500 10px/1.5 "DM Mono", monospace;
+}
+
+.alumni-note {
+  color: #68757c;
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 @media (max-width: 760px) {
@@ -98,6 +141,12 @@
   .people-section .member-list li,
   .people-section .alumni-list li {
     min-height: 0;
+  }
+
+  .people-section .alumni-list li {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 18px 0 20px;
   }
 
   .pi-profile {

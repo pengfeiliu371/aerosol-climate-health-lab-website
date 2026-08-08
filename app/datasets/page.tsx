@@ -9,7 +9,7 @@ export default function DatasetsPage() {
       <main>
         <section className="page-hero">
           <p className="kicker">DATASETS</p>
-          <h1>Data for the<br /><em>community.</em></h1>
+          <h1 aria-label="Data for the community.">Data for the<br /><em>community.</em></h1>
           <p>Open datasets developed by the laboratory for atmospheric modeling, aerosol optical properties, molecular transport, and historical-emissions research.</p>
         </section>
 
@@ -39,7 +39,7 @@ export default function DatasetsPage() {
                 </div>
               </div>
               <figure className="dataset-figure">
-                <img src={sitePath(dataset.image)} alt={dataset.alt} />
+                <img src={sitePath(dataset.image)} alt={dataset.alt} loading="lazy" decoding="async" />
               </figure>
             </article>
           ))}
@@ -48,3 +48,4 @@ export default function DatasetsPage() {
     </PageShell>
   );
 }
+

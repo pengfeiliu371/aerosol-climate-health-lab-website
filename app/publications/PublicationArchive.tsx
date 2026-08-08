@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { ScientificText } from "../components/ScientificText";
 import {
   books,
   inPreparation,
@@ -45,7 +46,7 @@ function CitationText({ text }: { text: string }) {
     }
     return part.startsWith("http")
       ? <a key={`${part}-${index}`} href={part} target="_blank" rel="noreferrer">{part}</a>
-      : part;
+      : <ScientificText text={part} key={`${part}-${index}`} />;
   })}</>;
 }
 

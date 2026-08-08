@@ -1,5 +1,6 @@
 import { themes } from "../data/research";
 import { PageShell } from "../components/SiteChrome";
+import { ScientificText } from "../components/ScientificText";
 import { sitePath } from "../lib/sitePath";
 import "./references.css";
 
@@ -9,7 +10,7 @@ export default function ResearchPage() {
       <main>
         <section className="page-hero">
           <p className="kicker">RESEARCH</p>
-          <h1>Understanding aerosols<br />from molecule to <em>atmosphere.</em></h1>
+          <h1 aria-label="Understanding aerosols from molecule to atmosphere.">Understanding aerosols<br />from molecule to <em>atmosphere.</em></h1>
           <p>We study the processes and physicochemical properties of atmospheric aerosol particles through laboratory experiments, field measurements, and chemical transport modeling.</p>
         </section>
         <section className="page-body research-detail">
@@ -22,19 +23,19 @@ export default function ResearchPage() {
               <span>0{index + 1}</span>
               <div className="research-copy">
                 <h2>{title}</h2>
-                <p>{text}</p>
+                <p><ScientificText text={text} /></p>
                 <div className="research-references">
                   <h3>References</h3>
                   <ol>
                     {references.map(({ label, href }) => (
                       <li key={href}>
-                        <a href={href} target="_blank" rel="noreferrer">{label}</a>
+                        <a href={href} target="_blank" rel="noreferrer"><ScientificText text={label} /></a>
                       </li>
                     ))}
                   </ol>
                 </div>
               </div>
-              <figure className="research-figure"><img src={sitePath(image)} alt={alt} /></figure>
+              <figure className="research-figure"><img src={sitePath(image)} alt={alt} loading="lazy" decoding="async" /></figure>
             </article>
             ))}
           <aside>
@@ -46,3 +47,4 @@ export default function ResearchPage() {
     </PageShell>
   );
 }
+

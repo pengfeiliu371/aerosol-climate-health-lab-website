@@ -9,6 +9,7 @@ import {
   peerReviewed,
   supplementalLinks,
 } from "../data/publications";
+import { reports } from "../data/reports";
 
 type PublicationYear = {
   year: string;
@@ -102,13 +103,15 @@ export function PublicationArchive() {
         .map(({ year, citations }) => ({ year, citations: citations.filter(matches) }))
         .filter(({ citations }) => citations.length > 0),
       books: books.filter(matches),
+      reports: reports.filter(matches),
     };
   }, [normalizedQuery]);
 
   const resultCount = filtered.preparation.length
     + filtered.review.length
     + filtered.years.reduce((total, group) => total + group.citations.length, 0)
-    + filtered.books.length;
+    + filtered.books.length
+    + filtered.reports.length;
   const hasQuery = normalizedQuery.length > 0;
 
   return (
@@ -159,6 +162,11 @@ export function PublicationArchive() {
         {filtered.books.map((citation) => <PublicationRow key={citation} citation={citation} />)}
       </>}
 
+      {filtered.reports.length > 0 && <>
+        <h2 className="publication-section-heading">Reports &amp; Assessments</h2>
+        {filtered.reports.map((citation) => <PublicationRow key={citation} citation={citation} />)}
+      </>}
+
       {resultCount === 0 && <div className="publication-empty">
         <h2>No matching publications</h2>
         <p>Try an author surname, journal title, research topic, or year.</p>
@@ -167,4 +175,3 @@ export function PublicationArchive() {
     </section>
   );
 }
-

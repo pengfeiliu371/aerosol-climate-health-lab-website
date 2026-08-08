@@ -42,12 +42,12 @@ export const members: Member[] = [
 export const formerMembers = [
   {
     name: "Bingqing Zhang",
-    roleAndPeriod: "Graduate student · 2021–2025",
+    roleAndPeriod: "Ph.D. student · 2021–2025",
     currentPosition: "Postdoctoral fellow, University of Chicago",
   },
   {
     name: "Lifei Yin",
-    roleAndPeriod: "Graduate student · 2021–2025",
+    roleAndPeriod: "Ph.D. student · 2021–2025",
     currentPosition: "California Air Resources Board",
   },
   {
@@ -57,7 +57,7 @@ export const formerMembers = [
   },
   {
     name: "Nara Shin",
-    roleAndPeriod: "Graduate student · 2020–2023",
+    roleAndPeriod: "Master’s student · 2020–2023",
     currentPosition: "Ph.D. student, Purdue University",
   },
 ];

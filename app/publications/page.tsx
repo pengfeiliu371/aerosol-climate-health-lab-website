@@ -228,7 +228,7 @@ export default function PublicationsPage() {
         </section>
         <section className="page-body publication-list">
           <p className="kicker">COMPLETE PUBLICATION ARCHIVE</p>
-          <p className="archive-note">Complete list migrated from the former group website, covering 2009â€“2026. * indicates corresponding author.</p>
+          <p className="archive-note">Complete list migrated from the former group website, covering 2009–2026. * indicates corresponding author.</p>
           <h2 className="publication-section-heading">In preparation</h2>
           {inPreparation.map((citation) => <article key={citation}><time>NEW</time><p><CitationText text={citation} /></p></article>)}
           <h2 className="publication-section-heading">Submitted or in review</h2>

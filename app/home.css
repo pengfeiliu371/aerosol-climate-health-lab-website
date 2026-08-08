@@ -15,6 +15,19 @@
   object-position: center;
 }
 
+.hero-affiliation a {
+  text-decoration: underline;
+  text-decoration-color: rgba(107, 108, 102, 0.48);
+  text-underline-offset: 3px;
+  transition: color 160ms ease, text-decoration-color 160ms ease;
+}
+
+.hero-affiliation a:hover,
+.hero-affiliation a:focus-visible {
+  color: var(--navy);
+  text-decoration-color: var(--gold);
+}
+
 .statement {
   padding-top: clamp(78px, 7vw, 104px);
   padding-bottom: clamp(78px, 7vw, 104px);
@@ -209,3 +222,4 @@
     border-left: 0;
   }
 }
+

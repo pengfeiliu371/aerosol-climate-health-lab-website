@@ -26,9 +26,51 @@
   outline-offset: 5px;
 }
 
+.support-research {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, .85fr);
+  gap: clamp(44px, 9vw, 140px);
+  padding: clamp(64px, 8vw, 108px) var(--content-gutter);
+  background: #e7eff1;
+}
+
+.support-research h2 {
+  max-width: 650px;
+  margin: 0;
+  color: var(--navy);
+  font: 500 clamp(36px, 4.4vw, 60px)/1.04 "Source Serif 4", serif;
+  letter-spacing: -1.8px;
+}
+
+.support-copy {
+  max-width: 590px;
+}
+
+.support-copy p {
+  margin: 0 0 18px;
+  color: #53616a;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.support-copy .quiet-link {
+  color: var(--navy);
+  text-decoration: none;
+}
+
 @media (max-width: 760px) {
   .protected-email {
     font-size: 21px;
   }
-}
 
+  .support-research {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 62px 24px 72px;
+  }
+
+  .support-research h2 {
+    font-size: 38px;
+    letter-spacing: -1.2px;
+  }
+}

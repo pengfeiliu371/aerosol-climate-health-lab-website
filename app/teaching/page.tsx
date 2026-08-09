@@ -6,7 +6,7 @@ const courses = [
     code: "EAS 3603",
     title: "Thermodynamics of the Earth System",
     offerings: [
-      "Fall 2025",
+      "Fall 2025 — co-taught with Dr. Ellery Ingall",
       "Fall 2026 — co-taught with Dr. Jennifer Bowen",
     ],
   },

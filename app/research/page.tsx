@@ -38,6 +38,16 @@ export default function ResearchPage() {
               <figure className="research-figure"><img src={sitePath(image)} alt={alt} loading="lazy" decoding="async" /></figure>
             </article>
             ))}
+          <aside className="research-platform" aria-labelledby="open-pm-network-title">
+            <div>
+              <p className="kicker">OPEN RESEARCH INFRASTRUCTURE</p>
+              <h2 id="open-pm-network-title">Open PM Network</h2>
+            </div>
+            <div>
+              <p>An open-source platform for resilient particulate-matter sensing, complete raw-data preservation, and privacy-aware research and community deployments.</p>
+              <a className="quiet-link dark" href="https://www.openpmnetwork.org" target="_blank" rel="noreferrer">Visit Open PM Network <span>↗</span></a>
+            </div>
+          </aside>
           <aside>
             <p>Our work connects aerosol physics and chemistry with instrument development, field observations, and environmental-health questions.</p>
             <a className="quiet-link dark" href={sitePath("/datasets")}>Explore datasets <span>→</span></a>

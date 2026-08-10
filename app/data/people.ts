@@ -31,7 +31,7 @@ export const members: Member[] = [
   {
     name: "Siqi Wang",
     role: "Ph.D. student · 2026–",
-    initials: "SW",
+    image: "/images/people/siqi-wang.jpg",
   },
   {
     name: "Zishu Wang",

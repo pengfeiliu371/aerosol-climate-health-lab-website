@@ -18,7 +18,9 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname().replace(/\/$/, "");
   return <header className="site-header">
-    <a className="wordmark" href={sitePath("/")}><strong>AEROSOL</strong><span>Climate &amp; Health Laboratory<br />Georgia Tech · EAS</span></a>
+    <a className="wordmark" href={sitePath("/")} aria-label="Liu Aerosol, Climate and Health Laboratory home">
+      <span className="wordmark-name"><strong><span>LIU</span> AEROSOL</strong><span>CLIMATE &amp; HEALTH LAB · GEORGIA TECH EAS</span></span>
+    </a>
     <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-controls="main-navigation" aria-label={`${menuOpen ? "Close" : "Open"} main navigation`}>MENU</button>
     <nav id="main-navigation" className={menuOpen ? "open" : ""} aria-label="Main navigation">
       {navLinks.map(({ href, label }) => {
@@ -31,8 +33,7 @@ export function Header() {
 }
 
 export function Footer() {
-  return <footer><div className="wordmark"><strong>AEROSOL</strong><span>Climate &amp; Health Laboratory<br />Georgia Tech · EAS</span></div><p>School of Earth and Atmospheric Sciences<br />Georgia Institute of Technology<br />Atlanta, Georgia</p><p>© {new Date().getFullYear()} Aerosol, Climate &amp; Health Laboratory</p></footer>;
+  return <footer><div className="wordmark"><span className="wordmark-name"><strong><span>LIU</span> AEROSOL</strong><span>CLIMATE &amp; HEALTH LAB · GEORGIA TECH EAS</span></span></div><p>School of Earth and Atmospheric Sciences<br />Georgia Institute of Technology<br />Atlanta, Georgia</p><p>© {new Date().getFullYear()} Aerosol, Climate &amp; Health Laboratory</p></footer>;
 }
 
 export function PageShell({ children }: { children: ReactNode }) { return <><Header />{children}<Footer /></>; }
-

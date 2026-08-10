@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/.pnpm-store/
 /.pnp
 .pnp.*
 .yarn/*
@@ -42,4 +43,7 @@ next-env.d.ts
 /output/
 /tmp/
 /work/
+
+# Private, full-resolution source photography (never publish directly)
+/source-assets/
 

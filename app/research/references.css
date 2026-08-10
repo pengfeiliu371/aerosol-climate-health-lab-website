@@ -52,11 +52,54 @@
   text-underline-offset: 3px;
 }
 
+.research-detail .research-platform {
+  display: grid;
+  grid-template-columns: minmax(210px, 0.62fr) minmax(0, 1fr);
+  gap: clamp(30px, 6vw, 86px);
+  max-width: none;
+  margin: 62px 0 0;
+  padding: clamp(28px, 4vw, 46px);
+  border: 1px solid var(--rule);
+  background: rgba(255, 255, 255, 0.72);
+  font: inherit;
+}
+
+.research-platform .kicker {
+  margin-bottom: 14px;
+}
+
+.research-platform h2 {
+  margin: 0;
+  color: var(--navy);
+  font: 500 clamp(31px, 4vw, 48px) / 1.05 "Source Serif 4", serif;
+  letter-spacing: -1.2px;
+}
+
+.research-platform div > p:not(.kicker) {
+  max-width: 590px;
+  margin: 0;
+  color: #52616a;
+  font: 15px / 1.72 "Libre Franklin", sans-serif;
+}
+
+.research-platform .quiet-link {
+  margin-top: 24px;
+}
+
 @media (min-width: 1100px) {
   .research-detail article {
     grid-template-columns: 70px minmax(0, 680px) minmax(220px, 290px);
     column-gap: clamp(28px, 3vw, 48px);
     justify-content: start;
+  }
+}
+
+@media (max-width: 760px) {
+  .research-detail .research-platform {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 48px;
+    padding: 26px 22px 30px;
   }
 }
 

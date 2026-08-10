@@ -15,6 +15,32 @@
   object-position: center;
 }
 
+@media (min-width: 761px) {
+  .hero {
+    min-height: 0;
+    height: clamp(560px, calc(100vh - 76px), 720px);
+  }
+
+  .hero-copy {
+    padding-top: clamp(58px, 7vh, 82px);
+    padding-bottom: 56px;
+  }
+
+  .home-index a {
+    min-height: 200px;
+    padding-top: 27px;
+    padding-bottom: 25px;
+  }
+
+  .home-index h2 {
+    margin-top: 28px;
+  }
+
+  .home-index b {
+    bottom: 21px;
+  }
+}
+
 .hero-affiliation a {
   text-decoration: underline;
   text-decoration-color: rgba(107, 108, 102, 0.48);

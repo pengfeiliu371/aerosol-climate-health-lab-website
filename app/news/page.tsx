@@ -33,7 +33,17 @@ export default function NewsPage() {
         </section>
         <section className="page-body news-page">
           <p className="kicker">LATEST</p>
-          {posts.map(({ date, text, href, linkLabel, emphasis, image, imageAlt }) => (
+          {posts.map(({
+            date,
+            text,
+            href,
+            linkLabel,
+            secondaryHref,
+            secondaryLinkLabel,
+            emphasis,
+            image,
+            imageAlt,
+          }) => (
             <article className="news-item" key={text}>
               <div className="news-copy">
                 <time>{date}</time>
@@ -42,6 +52,11 @@ export default function NewsPage() {
                   {href ? (
                     <>
                       {" "}<a href={href} target="_blank" rel="noreferrer">{linkLabel}</a>.
+                    </>
+                  ) : null}
+                  {secondaryHref ? (
+                    <>
+                      {" "}<a href={secondaryHref} target="_blank" rel="noreferrer">{secondaryLinkLabel}</a>.
                     </>
                   ) : null}
                 </h2>

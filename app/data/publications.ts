@@ -133,7 +133,7 @@ export const supplementalLinks = [
   {
     citationIncludes: "Lewy body dementia promotion by air pollutants",
     label: "[Georgia Tech CoS News]",
-    href: "https://cos.gatech.edu/news/new-links-air-pollution-and-dementia",
+    href: "https://www.gatech.edu/news/2025/09/16/new-links-air-pollution-and-dementia",
   },
   {
     citationIncludes: "Regional-specific trends of PM2.5 and O3 temperature sensitivity",

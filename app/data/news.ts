@@ -44,8 +44,10 @@ export const posts = [
   {
     date: "2025.09",
     text: "Our group contributed to a collaborative study published in Science by Zhang et al. that links fine-particle air pollution to Lewy body dementia and provides experimental evidence for a biological mechanism. The work brought together researchers from Georgia Tech, Johns Hopkins Medicine, Columbia University, and other partner institutions.",
-    href: "https://cos.gatech.edu/news/new-links-air-pollution-and-dementia",
+    href: "https://www.gatech.edu/news/2025/09/16/new-links-air-pollution-and-dementia",
     linkLabel: "Read the Georgia Tech feature",
+    secondaryHref: "https://doi.org/10.1126/science.adu4132",
+    secondaryLinkLabel: "Read the Science article",
     emphasis: ["Science"],
   },
   {

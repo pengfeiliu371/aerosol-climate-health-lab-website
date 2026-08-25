@@ -11,7 +11,7 @@ export type Theme = {
 
 export const themes: Theme[] = [
   {
-    displayPriority: 1,
+    displayPriority: 2,
     title: "Thin-film techniques for aerosol characterization",
     text: "Atmospheric organic aerosol affects climate and human health but remains difficult to characterize because it contains thousands of chemical species. We developed an electrostatic-precipitation method to produce uniform organic aerosol thin films [Liu et al., ES&T, 2013]. Ellipsometry measurements of these films yielded complex refractive indices for biogenic and anthropogenic secondary organic aerosols (SOA) [Liu et al., ES&T, 2013; ACP, 2015]. We also use a highly sensitive Quartz Crystal Microbalance (QCM) to track nanogram-scale mass changes. QCM-based measurements have quantified SOA volatility and evaporation under atmospherically relevant temperature and RH [Liu et al., PNAS, 2016], diffusion of organic molecules and water within particles [Liu et al., PNAS, 2016; ACS Cent. Sci., 2018], and mass-based hygroscopicity across a wide RH range [Liu et al., Nature Comm., 2018]. Recent applications follow aerosol mass and physical-property changes during solar irradiation [Bai et al., ES&T, 2026] and characterize the hygroscopicity and cloud-condensation-nuclei activity of fresh and aged biomass-burning particles [Bai et al., ACS ES&T Air, 2026]. Current work focuses on SOA photochemical aging, volatility-dependent hygroscopicity, and the physical properties of biomass-burning organic aerosol.",
     image: "/images/research/thin-film-characterization.png",
@@ -86,7 +86,7 @@ export const themes: Theme[] = [
     ],
   },
   {
-    displayPriority: 3,
+    displayPriority: 1,
     title: "Environmental health impacts of air pollution",
     text: "Air pollution is a pervasive environmental exposure with consequences that extend beyond respiratory and cardiovascular disease. Our research integrates high-resolution exposure assessment, large-scale epidemiologic cohorts, and experimental toxicology to investigate how fine particulate matter (PM2.5), nitrogen dioxide, and specific aerosol constituents affect human health. Using national Medicare cohorts and spatially resolved air-pollution data, we examine associations with mortality, stroke, dementia, and other neurological outcomes [Shi et al., 2021; Shi et al., 2023]. We also investigate inequities in ambient NO2 exposure across the United States [Wang et al., 2023]. A recent collaborative Science study provides experimental evidence linking PM2.5 exposure to Lewy body dementia-relevant pathology [Zhang et al., 2025]. Our goal is to provide evidence that supports more effective and equitable air-quality policy.",
     image: "/images/research/environmental-health-framework.png",
@@ -105,13 +105,13 @@ export const themes: Theme[] = [
         href: "https://doi.org/10.1073/pnas.2208450120",
       },
       {
-        label: "Zhang, H., Shi, L., Lee, K., et al. (2025). Lewy body dementia promotion by air pollutants. Science, 389, eadu4132.",
+        label: "Zhang, X., Liu, H., Wu, X., et al. (2025). Lewy body dementia promotion by air pollutants. Science, 389(6764), eadu4132.",
         href: "https://doi.org/10.1126/science.adu4132",
       },
     ],
   },
   {
-    displayPriority: 2,
+    displayPriority: 3,
     title: "Climate-air quality interactions",
     text: "Rising temperatures can worsen air pollution, but the magnitude and drivers of this “climate penalty” vary across regions and evolve as emissions change. We combine high-resolution machine-learning datasets, observations, and chemical transport modeling to quantify how summertime PM2.5 and ozone respond to temperature across the United States. Our analysis shows that emission controls have substantially weakened the temperature sensitivity of PM2.5 and ozone in the eastern US, while the western US has become increasingly vulnerable because of temperature-sensitive wildfire emissions [Yin et al., 2025]. Using an improved GEOS-Chem model, we further identify the processes driving these regional patterns: chemical production governs the long-term sensitivity of isoprene SOA and sulfate in the eastern US, wildfire-related primary emissions are central in the West, and atmospheric transport modulates year-to-year variability [Yin et al., 2026]. This work improves projections of air quality under a warming climate and supports region-specific mitigation strategies.",
     image: "/images/research/climate-air-quality-interactions.png",
@@ -128,3 +128,4 @@ export const themes: Theme[] = [
     ],
   },
 ];
+

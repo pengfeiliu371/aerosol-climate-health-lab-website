@@ -42,6 +42,13 @@ export const posts = [
     emphasis: ["ACS ES&T Air"],
   },
   {
+    date: "2025.09",
+    text: "Our group contributed to a collaborative study published in Science by Zhang et al. that links fine-particle air pollution to Lewy body dementia and provides experimental evidence for a biological mechanism. The work brought together researchers from Georgia Tech, Johns Hopkins Medicine, Columbia University, and other partner institutions.",
+    href: "https://cos.gatech.edu/news/new-links-air-pollution-and-dementia",
+    linkLabel: "Read the Georgia Tech feature",
+    emphasis: ["Science"],
+  },
+  {
     date: "2025.07",
     text: "Bingqing Zhang and Lifei Yin successfully defended their Ph.D. dissertations. Bingqing began a postdoctoral fellowship at the University of Chicago, and Lifei joined the California Air Resources Board.",
     image: "/images/news/bingqing-zhang-lifei-yin-graduation.jpg",

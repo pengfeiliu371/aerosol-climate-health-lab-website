@@ -11,7 +11,7 @@ export default function ResearchPage() {
         <section className="page-hero">
           <p className="kicker">RESEARCH</p>
           <h1 aria-label="Understanding aerosols from molecule to atmosphere.">Understanding aerosols<br />from molecule to <em>atmosphere.</em></h1>
-          <p>We study the processes and physicochemical properties of atmospheric aerosol particles through laboratory experiments, field measurements, and chemical transport modeling.</p>
+          <p>We investigate how atmospheric aerosols form, transform, and affect air quality, climate, and human health through laboratory experiments, field measurements, exposure assessment, and modeling.</p>
         </section>
         <section className="page-body research-detail">
           <p className="kicker">AREAS OF INQUIRY</p>
@@ -57,4 +57,3 @@ export default function ResearchPage() {
     </PageShell>
   );
 }
-

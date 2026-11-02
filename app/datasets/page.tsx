@@ -10,7 +10,7 @@ export default function DatasetsPage() {
         <section className="page-hero">
           <p className="kicker">DATASETS</p>
           <h1 aria-label="Data for the community.">Data for the<br /><em>community.</em></h1>
-          <p>Open datasets developed by the laboratory for atmospheric modeling, aerosol optical properties, molecular transport, and historical-emissions research.</p>
+          <p>Open datasets developed by the laboratory for aerosol liquid water, atmospheric modeling, aerosol optical properties, molecular transport, and historical-emissions research.</p>
         </section>
 
         <section className="page-body dataset-list">
@@ -39,7 +39,10 @@ export default function DatasetsPage() {
                 </div>
               </div>
               <figure className="dataset-figure">
-                <img src={sitePath(dataset.image)} alt={dataset.alt} loading="lazy" decoding="async" />
+                <a href={sitePath(dataset.image)} target="_blank" rel="noreferrer" aria-label={`Open full-size figure for ${dataset.title}`}>
+                  <img src={sitePath(dataset.image)} alt={dataset.alt} loading="lazy" decoding="async" />
+                </a>
+                {dataset.imageCaption && <figcaption>{dataset.imageCaption}</figcaption>}
               </figure>
             </article>
           ))}
@@ -48,4 +51,5 @@ export default function DatasetsPage() {
     </PageShell>
   );
 }
+
 

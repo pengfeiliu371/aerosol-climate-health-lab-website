@@ -7,6 +7,7 @@ export type Dataset = {
   title: string;
   image: string;
   alt: string;
+  imageCaption?: ReactNode;
   description: ReactNode;
   access: Array<{ label: string; href: string }>;
   references: Array<{ label: string; href: string }>;
@@ -14,82 +15,35 @@ export type Dataset = {
 
 export const datasets: Dataset[] = [
   {
-    kicker: "EMISSIONS INVENTORY",
-    title: "Global continental HCl and particulate chloride emissions",
-    image: "/images/datasets/gt-chlorine-inventory.png",
-    alt: "Global maps of continental hydrogen chloride and particulate chloride emissions by source sector",
+    kicker: "AEROSOL LIQUID WATER",
+    title: "High-resolution aerosol liquid water across the United States",
+    image: "/images/datasets/us-aerosol-liquid-water.webp",
+    alt: "Map of average aerosol liquid water content across the contiguous United States with detailed comparisons of aerosol liquid water, PM2.5, temperature, and relative humidity in six metropolitan areas",
+    imageCaption: (
+      <>
+        Figure 2 from <a href="https://doi.org/10.1038/s41612-026-01371-2" target="_blank" rel="noreferrer">Zhang et al. (2026)</a>, reproduced without modification under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noreferrer">CC BY-NC-ND 4.0</a>. © The Author(s) 2026.
+      </>
+    ),
     description: (
       <>
-        <p>GT-Chlorine is an emission inventory for hydrogen chloride (HCl) and particulate chloride (pCl) from continental sources. It includes six sectors: energy, industry, residential combustion, open waste burning, open biomass burning, and agriculture.</p>
-        <p>The files provide monthly mean HCl and pCl emission fluxes in kg m<sup>−2</sup> s<sup>−1</sup>, gridded at 0.1° × 0.1° resolution for 1960–2014. The data are HEMCO-ready and can be used directly in GEOS-Chem.</p>
+        <p>We developed a machine-learning framework that learns physically based thermodynamic relationships from GEOS-Chem and applies them to observation-constrained, high-resolution inputs. The resulting product provides daily median aerosol liquid water content (ALWC) across the contiguous United States at 1 km × 1 km resolution from 2000 to 2019.</p>
+        <p>The dataset resolves regional and urban-scale variability more clearly than the chemical transport model alone. ALWC is generally highest in the Midwest and lowest in the western United States, and it declined across most regions during the study period, primarily as sulfate concentrations decreased. Public files are available for 2000, 2005, 2010, 2015, and 2019; additional years are available upon request.</p>
       </>
     ),
     access: [
       {
-        label: "Open GT-Chlorine on Harvard Dataverse",
-        href: "https://doi.org/10.7910/DVN/23BRII",
+        label: "Open ALWC data on Harvard Dataverse",
+        href: "https://doi.org/10.7910/DVN/ADNPBD",
       },
     ],
     references: [
       {
-        label: "Zhang, B., Shen, H., Yun, X., et al. (2022). Global emissions of hydrogen chloride and particulate chloride from continental sources. Environmental Science & Technology, 56, 3894–3904.",
-        href: "https://doi.org/10.1021/acs.est.1c05634",
+        label: "Zhang, B., Yin, L., Yang, Y., et al. (2026). High-resolution aerosol liquid water content in the contiguous United States using machine learning. npj Climate and Atmospheric Science, 9, 161.",
+        href: "https://doi.org/10.1038/s41612-026-01371-2",
       },
       {
-        label: "Zhang, B., Liu, P., Shen, H., et al. (2022). Global Emissions of Hydrogen Chloride and Particulate Chloride from Continental Sources (GT-Chlorine). Harvard Dataverse.",
-        href: "https://doi.org/10.7910/DVN/23BRII",
-      },
-    ],
-  },
-  {
-    kicker: "AEROSOL OPTICAL PROPERTIES",
-    title: "Complex refractive indices of secondary organic aerosol",
-    image: "/images/datasets/soa-refractive-index.png",
-    alt: "Imaginary refractive indices of anthropogenic and biogenic secondary organic material compared with brown and black carbon",
-    description: (
-      <>
-        <p>We developed a method to measure the spectroscopic complex refractive indices (<em>m</em> = <em>n</em> + <em>ik</em>) of secondary organic aerosol (SOA) thin films using ellipsometry and UV–VIS spectrophotometry. The method was applied to SOA from the ozonolysis of α-pinene, limonene, and catechol, and from the photooxidation of toluene and <em>m</em>-xylene. Squalane and nigrosin measurements provide method validation.</p>
-        <p>The tabulated optical constants span wavelengths from 220 nm to approximately 1000 nm. They are included in the <a href="https://hitran.org/" target="_blank" rel="noreferrer">HITRAN2020 database</a> and have supported subsequent aerosol studies, including <a href="https://doi.org/10.1126/science.abm7915" target="_blank" rel="noreferrer">Corral Arroyo et al. (Science, 2022)</a>.</p>
-      </>
-    ),
-    access: [
-      {
-        label: "Open tabulated data on GitHub",
-        href: "https://github.com/pengfeiliu371/OA_refractive_index/",
-      },
-    ],
-    references: [
-      {
-        label: "Liu, P., Zhang, Y., & Martin, S. T. (2013). Complex refractive indices of thin films of secondary organic materials by spectroscopic ellipsometry from 220 to 1200 nm. Environmental Science & Technology, 47, 13594–13601.",
-        href: "https://doi.org/10.1021/es403411e",
-      },
-      {
-        label: "Liu, P. F., Abdelmalki, N., Hung, H.-M., et al. (2015). Ultraviolet and visible complex refractive indices of secondary organic material produced by photooxidation of the aromatic compounds toluene and m-xylene. Atmospheric Chemistry and Physics, 15, 1435–1446.",
-        href: "https://doi.org/10.5194/acp-15-1435-2015",
-      },
-    ],
-  },
-  {
-    kicker: "MOLECULAR TRANSPORT",
-    title: "Water diffusivity in secondary organic aerosol material",
-    image: "/images/datasets/soa-water-diffusivity.gif",
-    alt: "Water diffusivity and mixing timescales in sucrose and secondary organic material as a function of water activity",
-    description: (
-      <>
-        <p>We measured water-desorption kinetics from SOA thin films using a Quartz Crystal Microbalance (QCM), then retrieved water diffusivity with a concentration-dependent multilayer diffusion model. Validation with amorphous sucrose produced results consistent with the literature.</p>
-        <p>The repository contains tabulated diffusivity data for sucrose and SOA materials derived from α-pinene, toluene, and <em>m</em>-xylene.</p>
-      </>
-    ),
-    access: [
-      {
-        label: "Open tabulated data on GitHub",
-        href: "https://github.com/pengfeiliu371/Liu_ACSCentSci_2018",
-      },
-    ],
-    references: [
-      {
-        label: "Liu, P., Li, Y. J., Wang, Y., et al. (2018). Highly viscous states affect the browning of atmospheric organic particulate matter. ACS Central Science, 4, 207–215.",
-        href: "https://doi.org/10.1021/acscentsci.7b00452",
+        label: "Zhang, B., & Liu, P. (2026). Daily Median Aerosol Liquid Water Content for the Contiguous United States at 1 km × 1 km Resolution. Harvard Dataverse.",
+        href: "https://doi.org/10.7910/DVN/ADNPBD",
       },
     ],
   },
@@ -121,4 +75,85 @@ export const datasets: Dataset[] = [
       },
     ],
   },
+  {
+    kicker: "EMISSIONS INVENTORY",
+    title: "Global continental HCl and particulate chloride emissions",
+    image: "/images/datasets/gt-chlorine-inventory.png",
+    alt: "Global maps of continental hydrogen chloride and particulate chloride emissions by source sector",
+    description: (
+      <>
+        <p>GT-Chlorine is an emission inventory for hydrogen chloride (HCl) and particulate chloride (pCl) from continental sources. It includes six sectors: energy, industry, residential combustion, open waste burning, open biomass burning, and agriculture.</p>
+        <p>The files provide monthly mean HCl and pCl emission fluxes in kg m<sup>−2</sup> s<sup>−1</sup>, gridded at 0.1° × 0.1° resolution for 1960–2014. The data are HEMCO-ready and can be used directly in GEOS-Chem.</p>
+      </>
+    ),
+    access: [
+      {
+        label: "Open GT-Chlorine on Harvard Dataverse",
+        href: "https://doi.org/10.7910/DVN/23BRII",
+      },
+    ],
+    references: [
+      {
+        label: "Zhang, B., Shen, H., Yun, X., et al. (2022). Global emissions of hydrogen chloride and particulate chloride from continental sources. Environmental Science & Technology, 56, 3894–3904.",
+        href: "https://doi.org/10.1021/acs.est.1c05634",
+      },
+      {
+        label: "Zhang, B., Liu, P., Shen, H., et al. (2022). Global Emissions of Hydrogen Chloride and Particulate Chloride from Continental Sources (GT-Chlorine). Harvard Dataverse.",
+        href: "https://doi.org/10.7910/DVN/23BRII",
+      },
+    ],
+  },
+  {
+    kicker: "MOLECULAR TRANSPORT",
+    title: "Water diffusivity in secondary organic aerosol material",
+    image: "/images/datasets/soa-water-diffusivity.gif",
+    alt: "Water diffusivity and mixing timescales in sucrose and secondary organic material as a function of water activity",
+    description: (
+      <>
+        <p>We measured water-desorption kinetics from SOA thin films using a Quartz Crystal Microbalance (QCM), then retrieved water diffusivity with a concentration-dependent multilayer diffusion model. Validation with amorphous sucrose produced results consistent with the literature.</p>
+        <p>The repository contains tabulated diffusivity data for sucrose and SOA materials derived from α-pinene, toluene, and <em>m</em>-xylene.</p>
+      </>
+    ),
+    access: [
+      {
+        label: "Open tabulated data on GitHub",
+        href: "https://github.com/pengfeiliu371/Liu_ACSCentSci_2018",
+      },
+    ],
+    references: [
+      {
+        label: "Liu, P., Li, Y. J., Wang, Y., et al. (2018). Highly viscous states affect the browning of atmospheric organic particulate matter. ACS Central Science, 4, 207–215.",
+        href: "https://doi.org/10.1021/acscentsci.7b00452",
+      },
+    ],
+  },
+  {
+    kicker: "AEROSOL OPTICAL PROPERTIES",
+    title: "Complex refractive indices of secondary organic aerosol",
+    image: "/images/datasets/soa-refractive-index.png",
+    alt: "Imaginary refractive indices of anthropogenic and biogenic secondary organic material compared with brown and black carbon",
+    description: (
+      <>
+        <p>We developed a method to measure the spectroscopic complex refractive indices (<em>m</em> = <em>n</em> + <em>ik</em>) of secondary organic aerosol (SOA) thin films using ellipsometry and UV–VIS spectrophotometry. The method was applied to SOA from the ozonolysis of α-pinene, limonene, and catechol, and from the photooxidation of toluene and <em>m</em>-xylene. Squalane and nigrosin measurements provide method validation.</p>
+        <p>The tabulated optical constants span wavelengths from 220 nm to approximately 1000 nm. They are included in the <a href="https://hitran.org/" target="_blank" rel="noreferrer">HITRAN2020 database</a> and have supported subsequent aerosol studies, including <a href="https://doi.org/10.1126/science.abm7915" target="_blank" rel="noreferrer">Corral Arroyo et al. (Science, 2022)</a>.</p>
+      </>
+    ),
+    access: [
+      {
+        label: "Open tabulated data on GitHub",
+        href: "https://github.com/pengfeiliu371/OA_refractive_index/",
+      },
+    ],
+    references: [
+      {
+        label: "Liu, P., Zhang, Y., & Martin, S. T. (2013). Complex refractive indices of thin films of secondary organic materials by spectroscopic ellipsometry from 220 to 1200 nm. Environmental Science & Technology, 47, 13594–13601.",
+        href: "https://doi.org/10.1021/es403411e",
+      },
+      {
+        label: "Liu, P. F., Abdelmalki, N., Hung, H.-M., et al. (2015). Ultraviolet and visible complex refractive indices of secondary organic material produced by photooxidation of the aromatic compounds toluene and m-xylene. Atmospheric Chemistry and Physics, 15, 1435–1446.",
+        href: "https://doi.org/10.5194/acp-15-1435-2015",
+      },
+    ],
+  },
 ];
+

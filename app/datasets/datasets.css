@@ -61,6 +61,24 @@
   height: auto;
 }
 
+.dataset-figure a {
+  display: block;
+}
+
+.dataset-figure figcaption {
+  margin: 8px 2px 1px;
+  color: #6a737a;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.dataset-figure figcaption a {
+  display: inline;
+  color: var(--navy);
+  text-decoration-color: #b79538;
+  text-underline-offset: 2px;
+}
+
 .dataset-references {
   margin-top: 25px;
   border-top: 1px solid var(--rule);
@@ -140,5 +158,11 @@
   .dataset-number {
     padding-top: 0;
   }
+
+  .dataset-actions .quiet-link {
+    max-width: 100%;
+    white-space: normal;
+  }
 }
+
 
